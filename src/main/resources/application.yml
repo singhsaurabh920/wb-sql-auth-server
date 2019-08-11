@@ -1,0 +1,19 @@
+server:
+  port: 9001
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/wb24?useSSL=false
+    username: root
+    password: root
+    platform: mysql
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+       # physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+
+check-user-scopes: true
